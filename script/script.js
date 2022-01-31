@@ -5,7 +5,7 @@
         {
             content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure consequuntur itaque placeat debitis doloremque ab iusto aspernatur corporis, qui inventore sequi dignissimos cumque quisquam nisi earum id quasi sint!",
             done: false
-        },
+        }
     ];
 
     const removeTask = (index) => {
@@ -51,7 +51,7 @@
 
         for (const task of tasks) {
             htmlString +=
-                `<div class="list__container">
+            `<div class="list__container">
             <li class="list__item ${task.done ? "list__item--done" : ""}">
             ${task.content}
             </li>
@@ -77,9 +77,9 @@
     };
 
     const init = () => {
-        render();
-
         const form = document.querySelector(".js-form");
+
+        render();
         form.addEventListener("submit", onFormSubmit);
     };
 

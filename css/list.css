@@ -28,15 +28,13 @@
     min-width: 30px;
     min-height: 30px;
     margin: 12px;
+    background-color: green;
+    order: -1;
 }
 
 .list__button--delete {
     background: url("../img/delete.png") center center no-repeat;
     background-size: 20px;
     background-color: red;
-}
-
-.list__button--done {
-    background-color: green;
-    order: -1;
+    order: 0;
 }

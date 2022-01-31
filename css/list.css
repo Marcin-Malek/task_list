@@ -1,0 +1,42 @@
+.list {
+    margin: 0px;
+    background-color: white;
+    padding: 40px 0px 20px 0px;
+}
+
+.list__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px;
+    border-bottom: 1.5px solid #ddd;
+    align-items: center;
+}
+
+.list__item {
+    list-style-type: none;
+    flex-grow: 1;
+    padding: 10px 0px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__button {
+    color: white;
+    border: none;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 12px;
+}
+
+.list__button--delete {
+    background: url("../img/delete.png") center center no-repeat;
+    background-size: 20px;
+    background-color: red;
+}
+
+.list__button--done {
+    background-color: green;
+    order: -1;
+}

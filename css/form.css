@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1.5px solid #ddd;
+    margin-right: 20px;
+}
+
+@media (max-width: 700px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .form__input {
+        margin: 0px 0px 10px 0px;
+    }
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px;
+}

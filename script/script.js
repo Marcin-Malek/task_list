@@ -26,6 +26,7 @@
 
         input.value = "";
         render();
+        input.focus();
     };
 
     const bindEvents = () => {

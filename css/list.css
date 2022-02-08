@@ -1,13 +1,12 @@
 .list {
     margin: 0px;
     background-color: white;
-    padding: 40px 0px 20px 0px;
+    padding: 40px 0 20px 0;
 }
 
 .list__container {
     display: flex;
-    flex-direction: row;
-    margin: 0px 20px;
+    margin: 0 20px;
     border-bottom: 1.5px solid #ddd;
     align-items: center;
 }
@@ -15,7 +14,7 @@
 .list__item {
     list-style-type: none;
     flex-grow: 1;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 .list__item--done {
@@ -28,13 +27,29 @@
     min-width: 30px;
     min-height: 30px;
     margin: 12px;
-    background-color: green;
+    background-color: hsl(120, 100%, 25%);
     order: -1;
+}
+
+.list__button:hover{
+    background-color: hsl(120, 100%, 30%);;
+}
+
+.list__button:active{
+    background-color: hsl(120, 100%, 40%);;
 }
 
 .list__button--delete {
     background: url("../img/delete.png") center center no-repeat;
-    background-size: 20px;
-    background-color: red;
+    background-size: 16px;
+    background-color: hsl(0, 100%, 45%);
     order: 0;
+}
+
+.list__button--delete:hover{
+    background-color: hsl(0, 100%, 50%);;
+}
+
+.list__button--delete:active{
+    background-color: hsl(0, 100%, 65%);;
 }

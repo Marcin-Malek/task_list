@@ -13,6 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="script/script.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <title>Lista zadań</title>
@@ -25,7 +26,11 @@
         <input type="text" class="form__input js-input" placeholder="Co jest do zrobienia ?">
         <button class="form__button js-button">Dodaj zadanie</button>
     </form>
-    <h2 class="body__header">Lista zadań</h2>
+    <header class="header">
+        <h2 class="header__content">Lista zadań</h2>
+        <div class="container js-buttonContainer">
+        </div>
+    </header>
     <ul class="list js-list"></ul>
 </body>
 

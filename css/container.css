@@ -1,0 +1,37 @@
+.container {
+    align-self: center;
+    margin-left: auto;
+}
+
+.container__button {
+    margin: 12px;
+    background: none;
+    border: none;
+    color: teal;
+}
+
+.container__button:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.container__button:active {
+    color: hsl(180, 100%, 40%);
+}
+
+.container__button:disabled {
+    color: #555;
+}
+
+@media (max-width: 700px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 0;
+        margin: 10px;
+    }
+}

@@ -1,58 +1,45 @@
 {
     const input = document.querySelector(".js-input");
 
-    const tasks = [
-        {
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure consequuntur itaque placeat debitis doloremque ab iusto aspernatur corporis, qui inventore sequi dignissimos cumque quisquam nisi earum id quasi sint!",
-            done: false
-        }
-    ];
+    let tasks = [];
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1)
+        ];
         render();
     };
 
-    const toggleTaskStatus = (index) => {
-        tasks[index].done = !tasks[index].done;
+    const toggleTaskState = (index) => {
+        tasks = [
+            ...tasks.slice(0, index),
+            {...tasks[index], done: !tasks[index].done},
+            ...tasks.slice(index + 1)
+        ];
         render();
     };
 
     const addNewTask = () => {
-        tasks.push({
-            content: input.value.trim(),
-            done: false
-        });
+        tasks = [
+            ...tasks,
+            {
+                content: input.value.trim(),
+                done: false
+            }
+        ]
 
         input.value = "";
-        render();
         input.focus();
+        render();
     };
 
-    const bindEvents = () => {
-        const deleteButtons = document.querySelectorAll(".js-delete");
-        const doneButtons = document.querySelectorAll(".js-done");
-
-        deleteButtons.forEach((deleteButton, index) => {
-            deleteButton.addEventListener("click", () => {
-                removeTask(index);
-            });
-        });
-
-        doneButtons.forEach((doneButton, index) => {
-            doneButton.addEventListener("click", () => {
-                toggleTaskStatus(index);
-            });
-        });
-    };
-
-    const render = () => {
-        const list = document.querySelector(".js-list");
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString +=
-            `<div class="list__container">
+                `<div class="list__container">
             <li class="list__item ${task.done ? "list__item--done" : ""}">
             ${task.content}
             </li>
@@ -61,9 +48,31 @@
             </div>`;
         };
 
-        list.innerHTML = htmlString;
+        document.querySelector(".js-list").innerHTML = htmlString;
+    }
 
-        bindEvents();
+    const bindRemoveEvents = () => {
+        document.querySelectorAll(".js-delete").forEach((deleteButton, index) => {
+            deleteButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+    };
+
+    const bindToggleStateEvents = () => {
+        document.querySelectorAll(".js-done").forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleTaskState(index);
+            });
+        });
+    };
+
+
+    const render = () => {
+        renderTasks();
+
+        bindRemoveEvents();
+        bindToggleStateEvents();
     };
 
     const onFormSubmit = (event) => {

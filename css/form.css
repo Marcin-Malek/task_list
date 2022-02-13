@@ -1,6 +1,5 @@
 .form {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: stretch;
     padding: 20px;
@@ -21,13 +20,23 @@
     }
 
     .form__input {
-        margin: 0px 0px 10px 0px;
+        margin: 0 0 10px 0;
     }
 }
 
 .form__button {
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
     color: white;
     border: none;
     padding: 10px;
+    transition: 1s;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 40%);
 }

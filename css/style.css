@@ -23,7 +23,6 @@ html {
 
 .header {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     background-color: white;
     margin: 2px 0;

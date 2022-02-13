@@ -1,5 +1,5 @@
 .list {
-    margin: 0px;
+    margin: 0;
     background-color: white;
     padding: 20px 0 20px 0;
 }
@@ -29,14 +29,15 @@
     margin: 12px;
     background-color: hsl(120, 100%, 25%);
     order: -1;
+    transition: 1s;
 }
 
 .list__button:hover{
-    background-color: hsl(120, 100%, 30%);;
+    background-color: hsl(120, 100%, 30%);
 }
 
 .list__button:active{
-    background-color: hsl(120, 100%, 40%);;
+    background-color: hsl(120, 100%, 40%);
 }
 
 .list__button--delete {
@@ -44,12 +45,13 @@
     background-size: 16px;
     background-color: hsl(0, 100%, 45%);
     order: 0;
+    transition: 1s;
 }
 
 .list__button--delete:hover{
-    background-color: hsl(0, 100%, 50%);;
+    background-color: hsl(0, 100%, 50%);
 }
 
 .list__button--delete:active{
-    background-color: hsl(0, 100%, 65%);;
+    background-color: hsl(0, 100%, 65%);
 }

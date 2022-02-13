@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    margin: 2px 0;
+}
+
+.header__content {
+    padding: 20px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+}

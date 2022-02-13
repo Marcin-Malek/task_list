@@ -6,7 +6,7 @@ This page is available for preview here: https://marcin-malek.github.io/task_lis
 
 ## About
 
-This web application is a part of frontend developer course that I took. It was created using technologies such as:
+This web application is a part of frontend developer course that I have taken. It was created using technologies such as:
 
 - HTML (BEM Convention)
 - CSS (BEM Convention, Flex, Google Fonts, Media Queries, Normalize.css)

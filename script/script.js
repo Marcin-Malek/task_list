@@ -45,12 +45,15 @@
             } else {
                 htmlString +=
                     `<div class="list__container">
-            <li class="list__item ${task.done ? "list__item--done" : ""}">
-            ${task.content}
-            </li>
-            <button class="list__button js-done">${task.done ? "✔" : ""}</button>
-            <button class="list__button list__button--delete js-delete"></button>
-            </div>`;
+                        <li class="list__item ${task.done ? "list__item--done" : ""}">
+                            ${task.content}
+                        </li>
+                        <button class="list__button js-done">
+                            ${task.done ? "✔" : ""}
+                        </button>
+                        <button class="list__button list__button--delete js-delete">
+                        </button>
+                    </div>`;
             }
         };
 

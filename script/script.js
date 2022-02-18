@@ -61,11 +61,12 @@
         let htmlString = "";
         if (tasks.length > 0) {
             htmlString +=
-                `<button class="container__button js-allDone" ${tasks.every(isDone) ? "disabled" : ""}>Ukończ wszystkie</button>`;
-        }
-        if (tasks.some(isDone)) {
-            htmlString +=
-                `<button class="container__button js-hideDone">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>`;
+                `<button class="container__button js-hideDone">
+                    ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                </button>
+                <button class="container__button js-allDone" ${tasks.every(isDone) ? "disabled" : ""}>
+                    Ukończ wszystkie
+                </button>`;
         }
         document.querySelector(".js-buttonContainer").innerHTML = htmlString;
     }
@@ -92,8 +93,6 @@
                 tasks = tasks.map(tasks => ({ ...tasks, done: true }));
                 render();
             });
-        }
-        if (tasks.find(isDone)) {
             document.querySelector(".js-hideDone").addEventListener("click", () => {
                 hideDoneTasks = !hideDoneTasks;
                 render();

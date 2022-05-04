@@ -6,17 +6,11 @@ html {
     box-sizing: inherit;
 }
 
-.body {
+body {
     font-family: 'Montserrat', sans-serif;
     word-break: break-word;
     max-width: 1000px;
     margin: auto;
     padding: 20px;
     background-color: #ddd;
-}
-
-.body__header {
-    padding: 20px;
-    margin: 2px 0;
-    background-color: white;
 }
